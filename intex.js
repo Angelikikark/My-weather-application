@@ -1,7 +1,8 @@
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
-  let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
+  let temperature = Math.round(response.data.temperature.current);
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
 }
@@ -47,7 +48,7 @@ function formatDate(date) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-let currentDateELement = document.querySelector("#current-date");
+let currentDateElement = document.querySelector("#current-date");
 let currentDate = new Date();
 
-currentDateELement.innerHTML = formatDate(currentDate);
+currentDateElement.innerHTML = formatDate(currentDate);
